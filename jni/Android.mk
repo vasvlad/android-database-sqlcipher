@@ -11,15 +11,7 @@ LOCAL_LDLIBS := -llog -latomic
 LOCAL_LDFLAGS += -L$(LOCAL_PATH)/android-libs/$(TARGET_ARCH_ABI) -fuse-ld=bfd
 LOCAL_STATIC_LIBRARIES += static-libcrypto
 LOCAL_MODULE    := libsqlcipher
-LOCAL_SRC_FILES := $(SQLCIPHER_SRC) \
-	jni_exception.cpp \
-	net_sqlcipher_database_SQLiteCompiledSql.cpp \
-	net_sqlcipher_database_SQLiteDatabase.cpp \
-	net_sqlcipher_database_SQLiteProgram.cpp \
-	net_sqlcipher_database_SQLiteQuery.cpp \
-	net_sqlcipher_database_SQLiteStatement.cpp \
-	net_sqlcipher_CursorWindow.cpp \
-	CursorWindow.cpp
+LOCAL_SRC_FILES := $(SQLCIPHER_SRC) 
 
 include $(BUILD_SHARED_LIBRARY)
 
